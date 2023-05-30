@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: hsl(187.1deg 24.75% 84.3%);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  color: white;
+  height: 100vh;
+  min-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 260px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 700px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.card .first-card {
+  grid-area: 1 / span 2 / span 1 / span 1;
+}
+.first-card {
+  background-color: white;
+  padding: 35px;
+}
+.first-card h2 {
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 20px;
+}
+.first-card h3 {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 20px;
+}
+.first-card p {
+  color: hsl(204, 43%, 93%);
+}
+.sec-card {
+  background-color: hsl(179, 62%, 43%);
+  padding: 35px;
+}
+.sec-card h3 {
+  margin-bottom: 20px;
+}
+.sec-card .price {
+  font-size: 30px;
+}
+.sec-card span {
+  font-size: 15px;
+  color: hsl(204, 43%, 93%);
+  align-items: center;
+  margin-left: 12px;
+}
+.sec-card p {
+  margin-bottom: 10px;
+}
+.sec-card a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 10px;
+  padding: 13px 10px;
+  margin-top: 35px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.third-card {
+  background-color: hsla(179, 62%, 43%, 0.7);
+  padding: 35px;
+}
+.third-card p {
+  margin-top: 20px;
+  line-height: 1.5;
+  max-width: 220px;
+}
+@media (max-width: 375px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 220px 220px;
+    align-items: center;
+  }
+  .card .first-card {
+    grid-area: 1 / 1 / 1 / 1;
+  }
+  .container {
+    min-width: 375px;
+  }
+  .third-card {
+    margin-top: 25px;
+  }
+  .third-card p {
+    margin-top: 15px;
+    line-height: 1.3;
+  }
+  .first-card {
+    padding: 30px;
+  }
+  .first-card h2 {
+    margin-bottom: 10px;
+  }
+  .first-card h3 {
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+}
